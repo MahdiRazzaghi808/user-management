@@ -73,7 +73,7 @@ const saveVersionToIndexedDB = async (version: Version): Promise<void> => {
 
 const initialFetchData = async (): Promise<any[]> => {
     try {
-        const res = await fetch("../db.json"); 
+        const res = await fetch("/db.json"); 
         if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
 
         const data = await res.json();
